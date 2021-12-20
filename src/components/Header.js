@@ -1,7 +1,7 @@
 import React from 'react'
-import { withRouter } from 'react-router'
-import { Link } from 'react-router-dom'
-import { getToken, deleteToken } from '../token'
+import {withRouter} from 'react-router'
+import {Link} from 'react-router-dom'
+import {deleteToken, getToken} from '../token'
 
 const Header = props => {
     const isLoggedIn = !!getToken();
@@ -12,6 +12,10 @@ const Header = props => {
                 <div className="fw7 mr1">Hacker News</div>
                 <Link to="/" className="ml1 no-underline black">
                     new
+                </Link>
+                <div className="ml1">|</div>
+                <Link to="/search" className="ml1 no-underline black">
+                    search
                 </Link>
                 {isLoggedIn && (
                     <div className="flex">
