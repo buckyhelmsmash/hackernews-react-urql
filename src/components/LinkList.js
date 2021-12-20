@@ -24,6 +24,7 @@ const LinkList = () => {
     if (error) return <div>Error</div>
 
     const linksToRender = data.feed.links
+    console.log('')
 
     return (
         <div>
