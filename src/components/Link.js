@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Link = ({ link }) => (
+const Link = ({link}) => (
     <div>
         <div>
             {link.description} ({link.url})

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import './styles/index.css'
 import App from './components/App'
 
-import { Provider, Client, dedupExchange, fetchExchange } from 'urql'
-import { cacheExchange } from '@urql/exchange-graphcache'
+import {Client, dedupExchange, fetchExchange, Provider} from 'urql'
+import {cacheExchange} from '@urql/exchange-graphcache'
 
 const cache = cacheExchange({})
 
@@ -15,7 +15,7 @@ const client = new Client({
 
 ReactDOM.render(
     <Provider value={client}>
-        <App />
+        <App/>
     </Provider>,
     document.getElementById('root')
 )
